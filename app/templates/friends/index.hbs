@@ -2,7 +2,10 @@
 
 <ul>
   {{#each model as |friend|}}
-  <li>{{link-to friend.fullName 'friends.show' friend}}</li>
+  <li>
+    {{link-to friend.fullName 'friends.show' friend}}
+    <small><a href="#" {{action "delete" friend}}>Delete</a></small>
+  </li>
   {{/each}}
 </ul>
 {{link-to 'New..' 'friends.new'}}
