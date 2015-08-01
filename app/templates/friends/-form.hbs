@@ -1,4 +1,6 @@
+<p>{{model.fullName}}</p>
 <form {{action "save" on="submit"}}>
+  <h2>{{errorMessage}}</h2>
   <p><label>First Name: {{input value=model.firstName}}</label></p>
   <p><label>Last Name: {{input value=model.lastName}}</label></p>
   <p><label>Email: {{input value=model.email}}</label></p>
