@@ -1,11 +1,18 @@
-<h1>Friends Index</h1>
-
-<ul>
-  {{#each model as |friend|}}
-  <li>
-    {{link-to friend.fullName 'friends.show' friend}}
-    <small><a href="#" {{action "delete" friend}}>Delete</a></small>
-  </li>
-  {{/each}}
-</ul>
-{{link-to 'New..' 'friends.new'}}
+<table class='primary'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Articles</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |friend|}}
+      <tr>
+        <td>{{link-to friend.fullName 'friends.show' friend}}</td>
+        <td>{{friend.totalArticles}}</td>
+        <td><small><a href="#" {{action "delete" friend}}>Delete</a></small></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

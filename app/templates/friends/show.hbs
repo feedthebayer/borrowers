@@ -1,6 +1,8 @@
-<h1>{{model.fullName}}</h1>
-<p>Email: {{model.email}}</p>
-<p>Twitter: {{model.twitter}}</p>
-{{link-to 'Index' 'friends.index'}}
-{{link-to 'Edit' 'friends.edit' model}}
-<a href="#" {{action "delete" model}}>Delete</a>
+<div class='card friend-profile'>
+  <p>{{model.firstName}}</p>
+  <p>{{model.lastName}}</p>
+  <p>{{model.email}}</p>
+  <p>{{model.twitter}}</p>
+  {{link-to 'Edit info' 'friends.edit' model}}
+  <a href="#" {{action "delete" model}}>Delete</a>
+</div>
