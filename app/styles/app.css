@@ -33,3 +33,7 @@ form {
 .friends-table thead tr {
   cursor: pointer;
 }
+
+.clickable {
+  cursor: pointer;
+}

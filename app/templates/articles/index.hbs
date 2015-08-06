@@ -5,12 +5,12 @@
       <th>Description</th>
       <th>Notes</th>
       <th>Borrowed Since</th>
-      <th>Status</th>
+      <th {{action 'toggleShowReturned'}} class='clickable'>Status</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    {{#each model as |article|}}
+    {{#each filteredArticles as |article|}}
       {{articles/article-row
         article=article
         save="save"
